@@ -1,16 +1,62 @@
-
-.navbar{
-    display: flex;
-    padding: auto;
-    background-color: rgb(240, 245, 140);
-
+/* Estilo general del navbar */
+.navbar {
+  display: flex;              /* coloca logo y links en línea */
+  justify-content: space-between; /* logo a la izquierda, links a la derecha */
+  align-items: center;        /* centra verticalmente */
+  padding: 10px 20px;
+  background-color: #333;     /* color de fondo */
 }
 
-.listanavbar{
-display: flex;
-
+/* Logo */
+.logo img {
+  height: 40px;               /* tamaño del logo */
 }
 
-#itemsbarra{
-    display: flex-end;
+/* Links de navegación */
+.nav-links {
+  list-style: none;           /* quita viñetas */
+  display: flex;              /* coloca los links en fila */
+  gap: 20px;                  /* espacio entre links */
+}
+
+.nav-links li a {
+  text-decoration: none;      /* quita subrayado */
+  color: white;               /* color del texto */
+  font-weight: bold;
+}
+
+.nav-links li a:hover {
+  color: #4CAF50;             /* color al pasar el mouse */
+}
+
+/* Botón menú responsive (oculto en escritorio) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive: en pantallas pequeñas */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;            /* oculta links por defecto */
+    flex-direction: column;   /* coloca links en columna */
+    background-color: #444;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .nav-links.show {
+    display: flex;            /* muestra links cuando se activa */
+  }
+
+  .menu-toggle {
+    display: block;           /* muestra botón ☰ en móviles */
+  }
 }
