@@ -1,0 +1,16 @@
+
+.navbar{
+    display: flex;
+    padding: auto;
+    background-color: rgb(240, 245, 140);
+
+}
+
+.listanavbar{
+display: flex;
+
+}
+
+#itemsbarra{
+    display: flex-end;
+}
